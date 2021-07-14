@@ -43,10 +43,6 @@ class Twitch_Bot
                 commands.store(command[0].strip.downcase, command[1].strip) # strip trailing/leading spaces and downcase key to avoid case sensitivity
             end
         end
-        #ENSURE ALL COMMANDS ARE THERE
-        commands.each do |key, value|
-            puts key + ':' + value
-        end
     end
 
     # RUN COMMAND FROM MESSAGE
@@ -116,11 +112,6 @@ class Twitch_Bot
 end
 
 def StartBot
-    puts "test"
-    puts "#{ENV['AUTH_KEY']}"
-    puts "#{ENV['TWITCH_CHANNEL']}"
-    puts "#{ENV['BOT_USER']}"
-
     bot = Twitch_Bot.new
     bot.run
 
